@@ -1,52 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    text-align: center;
-}
+<body>
 
-h1 {
-    color: #333;
-}
+<div class="container">
+    <h1>Smart Irrigation System</h1>
+    <p>Enter the inputs below to determine if irrigation is needed and the water usage level:</p>
+    
+    <form id="irrigationForm">
+        <label for="moisture">Soil Moisture Level (%):</label>
+        <input type="text" id="moisture" name="moisture" placeholder="Enter soil moisture level">
 
-form {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
+        <label for="temp">Temperature (°C):</label>
+        <input type="text" id="temp" name="temp" placeholder="Enter temperature">
 
-label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
+        <label for="humidity">Humidity (%):</label>
+        <input type="text" id="humidity" name="humidity" placeholder="Enter humidity level">
 
-input, select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
+        <label for="rainfall">Recent Rainfall (Yes/No):</label>
+        <select id="rainfall" name="rainfall">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
 
-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        <label for="soilType">Soil Type:</label>
+        <select id="soilType" name="soilType">
+            <option value="Sandy">Sandy</option>
+            <option value="Loamy">Loamy</option>
+            <option value="Clay">Clay</option>
+        </select>
 
-button:hover {
-    background-color: #218838;
-}
-
-#output {
-    margin-top: 20px;
-}
-
-#irrigation-need, #water-amount {
-    font-size: 18px;
-    color: #333;
-}
+        <label for="cropType">Crop Type:</label>
+        <input type="text" id="cropType" name="cropType" placeholder="Enter crop type">
+        
+        <button type="button" onclick="calculateIrrigation()">Calculate</button>
+    </form>
+    
+    <div id="result" class="result"></div>
+</div>
