@@ -4,46 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Irrigation System</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        h1 {
+            color: #006400;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0ffe0;
+            border: 1px solid #006400;
+            border-radius: 5px;
+        }
+</style>
 </head>
-<body>
-    <h1>Smart Irrigation System for Precision Farming</h1>
-    
-    <form id="irrigation-form">
-        <label for="moisture">Soil Moisture Level (in %):</label>
-        <input type="number" id="moisture" name="moisture" required><br><br>
-
-        <label for="crop">Type of Crop:</label>
-        <select id="crop" name="crop" required>
-            <option value="wheat">Wheat</option>
-            <option value="rice">Rice</option>
-            <option value="corn">Corn</option>
-            <option value="cotton">Cotton</option>
-            <option value="soybean">Soybean</option>
-            <option value="barley">Barley</option>
-            <option value="tomato">Tomato</option>
-            <option value="potato">Potato</option>
-            <option value="carrot">Carrot</option>
-            <option value="onion">Onion</option>
-        </select><br><br>
-
-        <label for="weather">Weather Condition:</label>
-        <select id="weather" name="weather" required>
-            <option value="sunny">Sunny</option>
-            <option value="slightly sunny">Slightly Sunny</option>
-            <option value="mostly cloudy">Mostly Cloudy</option>
-            <option value="cloudy">Cloudy</option>
-            <option value="rainy">Rainy</option>
-        </select><br><br>
-
-        <button type="submit">Check Irrigation Need</button>
-    </form>
-
-    <div id="output">
-        <p id="irrigation-need"></p>
-        <p id="water-amount"></p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
